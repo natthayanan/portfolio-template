@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyPortfolio – John Doe</title>
+  <!-- Tailwind CSS CDN (สำหรับตัวอย่างศึกษา) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* สีโทนกรม–ขาว–ดำ */
+    .bg-brand    { background-color: #0A1F44; } /* สีกรมเข้ม */
+    .text-brand  { color: #0A1F44; }
+    .text-light  { color: #EEEEEE; }           /* ข้อความสีอ่อน (ขาวตัดกับกรม) */
+    .bg-light    { background-color: #F5F5F5; } /* พื้นหลังสีอ่อนเทาอ่อน */
+  </style>
+</head>
+
+<body class="antialiased text-gray-800">
+
+  <!-- ── Header ── -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl font-semibold text-brand">MyPortfolio</a>
+      <nav class="space-x-6">
+        <a href="#home"   class="hover:text-brand">Home</a>
+        <a href="#about"  class="hover:text-brand">About</a>
+        <a href="#skills" class="hover:text-brand">Skills</a>
+        <a href="#contact"class="hover:text-brand">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ความสูงเผื่อให้ Header ไม่บังเนื้อหา -->
+  <div class="h-20"></div>
+
+  <!-- ── Section: Home ── -->
+  <section id="home" class="pt-24 pb-20 bg-brand text-light">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center">
+      <!-- ข้อความฝั่งซ้าย -->
+      <div class="w-full md:w-1/2 space-y-6" data-aos="fade-right">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Hi, I’m John Doe<br />
+          Full-Stack Developer
+        </h1>
+        <p class="text-gray-300">
+          Crafting high-performance, professional web solutions for businesses.<br>
+          Let’s build something great together.
+        </p>
+        <a href="#portfolio" class="inline-block mt-6 px-8 py-3 bg-white text-brand font-semibold rounded shadow hover:bg-gray-100">
+          View Portfolio
+        </a>
+      </div>
+
+      <!-- รูปภาพฝั่งขวา -->
+      <div class="w-full md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
+        <img
+          src="assets/hero.jpg"
+          alt="Profile photo"
+          class="rounded-lg shadow-lg object-cover w-full h-[360px] md:h-[460px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section: About ── -->
+  <section id="about" class="py-20 bg-light">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-brand mb-6 text-center">About Me</h2>
+      <p class="text-gray-700 leading-relaxed text-center">
+        I’m a Bangkok-based software engineer with 5+ years of experience building performant applications for SMEs and Fortune 500 companies alike.
+        My passion lies in crafting elegant, maintainable code that scales. When I’m not coding, you can find me cycling or exploring new coffee shops.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Section: Skills ── -->
+  <section id="skills" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-brand mb-10 text-center">Skills & Expertise</h2>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Skill 1 -->
+        <div class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-brand mb-2">Frontend Development</h3>
+          <p class="text-gray-600 text-sm">
+            • HTML5, CSS3, JavaScript (ES6+)<br>
+            • React.js, Vue.js, Tailwind CSS<br>
+            • Responsive & Mobile-first Design
+          </p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-brand mb-2">Backend Development</h3>
+          <p class="text-gray-600 text-sm">
+            • Node.js, Express.js<br>
+            • Python (Django, Flask)<br>
+            • RESTful API Design & GraphQL
+          </p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-brand mb-2">Databases & DevOps</h3>
+          <p class="text-gray-600 text-sm">
+            • MySQL, PostgreSQL, MongoDB<br>
+            • Docker, Git, CI/CD Pipelines<br>
+            • AWS, Netlify, Vercel Deployment
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section: Contact ── -->
+  <section id="contact" class="py-20 bg-light">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-brand mb-6 text-center">Get In Touch</h2>
+      <p class="text-gray-700 text-center mb-10">
+        I’m currently open for freelance work and new opportunities. Feel free to drop me a message!
+      </p>
+
+      <form action="#" method="POST" class="max-w-xl mx-auto space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-brand mb-1">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
+            placeholder="Your Name"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-brand mb-1">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
+            placeholder="you@example.com"
+          />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-brand mb-1">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand"
+            placeholder="Write your message here..."
+          ></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="px-8 py-3 bg-brand text-white font-semibold rounded shadow hover:bg-[#082A62] transition"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="bg-brand text-light py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-sm">&copy; 2025 John Doe. All rights reserved.</p>
+      <div class="mt-4 space-x-4">
+        <a href="https://github.com/yourusername" class="hover:underline">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" class="hover:underline">LinkedIn</a>
+        <a href="mailto:youremail@example.com" class="hover:underline">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
